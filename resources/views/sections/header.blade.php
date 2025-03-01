@@ -8,7 +8,7 @@
             ☰
         </button>
         <ul class="menu">
-            <li class="menu_item"><a href="/">Home</a></li>
+            <li class="menu_item"><a href="/">Accueil</a></li>
             <li class="menu_item has_submenu">
                 <a>Services</a>
                 <ul class="dropdown grid-dropdown">
@@ -23,7 +23,7 @@
                     <li><a href="/services/cloud-hébergement">Cloud & Hébergement</a></li>
                 </ul>
             </li>
-            <li class="menu_item"><a href="/about">About Us</a></li>
+            <li class="menu_item"><a href="/about">A propos</a></li>
             <li class="menu_item"><a href="/contact">Contact</a></li>
         </ul>
         <button class="ctaHeader" onclick="sendWhatsAppMessage('Demander Un Devis Pour un project')">Demander Un Devis</button>

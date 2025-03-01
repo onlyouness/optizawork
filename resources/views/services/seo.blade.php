@@ -223,9 +223,6 @@
 
             </div>
         </section>
-
         @include('sections.services')
-
-
     </section>
 @endsection

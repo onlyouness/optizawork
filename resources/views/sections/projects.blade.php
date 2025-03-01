@@ -6,7 +6,7 @@
 
 </div>
 <div class="grid grid-cols-1 lg:grid-cols-3 cursor-pointer gap-2 gap-y-4  ">
-    <div class="relative project">
+    <div class="relative project" data-aos="fade-right">
         <div class="project_overlay"></div>
         <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg"
             alt="">
@@ -18,7 +18,7 @@
                 Devis</button>
         </div>
     </div>
-    <div class="relative project">
+    <div class="relative project" data-aos="fade-up">
         <div class="project_overlay"></div>
         <img class="h-auto max-w-full rounded-lg"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="">
@@ -32,7 +32,7 @@
                 Devis</button>
         </div>
     </div>
-    <div class="relative project">
+    <div class="relative project" data-aos="fade-left">
         <div class="project_overlay"></div>
         <img class="h-auto max-w-full rounded-lg"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
@@ -46,7 +46,7 @@
                 Devis</button>
         </div>
     </div>
-    <div class="relative project">
+    <div class="relative project" data-aos="fade-right">
         <div class="project_overlay"></div>
         <img class="h-auto max-w-full rounded-lg"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="">
@@ -60,7 +60,7 @@
                 Devis</button>
         </div>
     </div>
-    <div class="relative project">
+    <div class="relative project" data-aos="fade-up">
         <div class="project_overlay"></div>
         <img class="h-auto max-w-full rounded-lg"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
@@ -74,7 +74,7 @@
                 Devis</button>
         </div>
     </div>
-    <div class="relative project">
+    <div class="relative project" data-aos="fade-left">
         <div class="project_overlay"></div>
         <img class="h-auto max-w-full rounded-lg"
             src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="">

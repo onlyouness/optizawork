@@ -31,14 +31,44 @@ header {
     top: 0;
     width: 100%;
     z-index: 99999999999;
-    transition: all 0.3s ease-in-out;
+    
+    /* transition: translate 0.3s ease-in-out; */
 }
+
+@keyframes dropdownreveal {
+    0%{
+        translate: 0px 10px;
+    }
+    100%{
+        translate: 0px 0px;
+    }
+}
+@keyframes reveal {
+    0% {
+        transform: translateY(-300px); /* Start with the header off-screen */
+    }
+    100% {
+        transform: translateY(0px); /* Move the header into view */
+    }
+}
+
+@keyframes paddingClose {
+    0% {
+        padding: 20px; /* Initial padding */
+    }
+    100% {
+        padding: 0px; /* Reduce padding */
+    }
+}
+
 header.sticky {
+    animation: 
+        reveal 0.5s ease-out, /* Reveal animation runs immediately */
+        paddingClose 0.5s ease-in-out 0.5s; /* Padding animation starts after 0.5s */
     position: fixed;
     top: 0;
     background-color: white; /* Adjust as needed */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow */
-    transform: translateY(0);
 }
 header.hidden {
     transform: translateY(-100%);
@@ -66,6 +96,7 @@ nav ul.menu {
     color: var(--primary-color);
     font-size: 1.2rem;
     text-decoration: none;
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .has_submenu {
@@ -75,21 +106,35 @@ nav ul.menu {
 
 .has_submenu .dropdown {
     position: absolute;
-    top: 32px;
-    left: 0;
+    top: 27px;
+    left: -300%;
     display: none;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 1rem;
     min-width: 100px;
     background: white;
     list-style: none;
     z-index: 10;
 }
-
-.has_submenu:hover .dropdown {
-    display: block;
+.ctaHeader{
+opacity: 0;
 }
 
+.has_submenu:hover .dropdown {
+        animation: dropdownreveal .3s ease-out;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        min-width: 50vw;
+        gap: 1rem;
+    
+}
+
+.dropdown a:hover{
+    text-decoration: underline;
+}
+.menu_item:hover {
+    color: #09aff4;
+  }
 /* .ctaHeader {
     background-color: var(--accent-color);
     color: white;
@@ -463,10 +508,13 @@ a:hover {
     margin-bottom: 1.5rem;
 }
 .titles h3 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 500;
     margin: 0;
 }
+.footer-logo {
+    width: 300px;
+  }
 .titles .description p {
     margin: 0 auto;
     margin-bottom: 0px;
@@ -1331,12 +1379,13 @@ section.content {
     max-width: 90%;
     margin-inline: auto;
 }
-.ctaHeader {
-    background-color: black;
+.ctaHeader.active {
+    background-color: #0db0f4;
+    opacity: 1;
     color: white;
     padding: 0.7rem 1.3rem;
     border-radius: 5px;
-    transition: transform .3s ease-in-out;  
+    transition: transform 0.3s ease-in-out;
     animation: vibration 0.4s ease-in-out infinite;
 }
 
@@ -1347,38 +1396,55 @@ section.content {
 }
 
 @keyframes vibration {
-    0% { transform: translate(-2px, 0); }
-    25% { transform: translate(2px, 0); }
-    50% { transform: translate(-2px, 0); }
-    75% { transform: translate(2px, 0); }
-    100% { transform: translate(0, 0); }
+    0% {
+        transform: translate(-2px, 0);
+    }
+    25% {
+        transform: translate(2px, 0);
+    }
+    50% {
+        transform: translate(-2px, 0);
+    }
+    75% {
+        transform: translate(2px, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
 }
-.highlight_hero{
+.highlight_hero {
     color: #09aff4;
 }
+.logo{
+    width:250px;
+}
+.menu-toggle{
+    display: none;
+}
+
 @media screen and (max-width: 550px) {
     .page-hero .hero-title {
         font-size: 1.9rem;
         max-width: 100%;
-      }
-      .sec-heading.light-title .title {
+    }
+    .sec-heading.light-title .title {
         font-size: 2rem;
         font-weight: 500;
-      }
-      #about .featured-text svg {
+    }
+    #about .featured-text svg {
         position: absolute;
         left: 0;
         top: -11px;
         width: 116px;
         height: 70px;
         transform: unset;
-      }
-      .about .text-area{
+    }
+    .about .text-area {
         padding-block: 3rem 0;
-      }
-      .mega-section {
+    }
+    .mega-section {
         padding-block: 5rem 1rem;
-      }
+    }
     .example_animate {
         display: none !important;
     }
@@ -1408,7 +1474,7 @@ section.content {
         font-weight: 500;
         margin: 0;
         min-width: 300px;
-      }
+    }
     .services_content {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -1460,39 +1526,39 @@ section.content {
     }
     .goalDetail {
         width: 100%;
-      }
-      .img_container {
+    }
+    .img_container {
         width: 100%;
         height: 200px;
-        order:-1;
-      }
-      .goalDetail h3 {
+        order: -1;
+    }
+    .goalDetail h3 {
         font-size: 22px;
         font-weight: 500;
         margin-block: 13px 5px;
         line-height: 30px;
-      }
-      .hero-title   .featured-text svg {
+    }
+    .hero-title .featured-text svg {
         position: absolute;
         left: 0%;
         top: 0%;
         width: 116px;
         height: 70px;
         transform: unset;
-      }
-      .hero-content .pre-title {
+    }
+    .hero-content .pre-title {
         width: 100% !important;
         text-align: center;
         font-size: 11px;
-      }
-      .features_articles {
+    }
+    .features_articles {
         margin: 1.4rem auto 1.4rem 0;
         gap: 1.4rem;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-      }
-      section.content {
+    }
+    section.content {
         width: 90%;
         margin: 2rem auto;
-      }
+    }
 }
