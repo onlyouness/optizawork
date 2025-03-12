@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-6 col-md-2 mb-3 first-col">
                 <a href="/" class="footer-logo">
-                    <img src="{{ asset('img/logo_purple.png') }}" alt="logo">
+                    <img src="{{ asset('img/logo_silver.png') }}" alt="logo">
                 </a>
                 <p>
                     Si vous souhaitez travailler avec nous ou simplement nous contacter, nous serions ravis de vous

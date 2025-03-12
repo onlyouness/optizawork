@@ -3,7 +3,10 @@
     --primary-color: black;
     --secondary-color: gray;
     --clr-main-rgb: 9, 175, 244;
-    --clr-main: #09aff4;
+    --clr-main: #680cab;
+    --clr-main-hover: #570a91;
+    --clr-main-background : rgb(147 51 234);
+    --clr-light-background : rgb(243 232 255 );
 }
 * {
     padding: 0;
@@ -25,14 +28,12 @@ a {
     text-decoration: none;
     color: var(--primary-color);
 }
-/* General Styles */
 header {
     position: relative;
     top: 0;
     width: 100%;
     z-index: 99999999999;
     
-    /* transition: translate 0.3s ease-in-out; */
 }
 
 @keyframes dropdownreveal {
@@ -45,30 +46,30 @@ header {
 }
 @keyframes reveal {
     0% {
-        transform: translateY(-300px); /* Start with the header off-screen */
+        transform: translateY(-300px);
     }
     100% {
-        transform: translateY(0px); /* Move the header into view */
+        transform: translateY(0px);
     }
 }
 
 @keyframes paddingClose {
     0% {
-        padding: 20px; /* Initial padding */
+        padding: 20px; 
     }
     100% {
-        padding: 0px; /* Reduce padding */
+        padding: 0px; 
     }
 }
 
 header.sticky {
     animation: 
-        reveal 0.5s ease-out, /* Reveal animation runs immediately */
-        paddingClose 0.5s ease-in-out 0.5s; /* Padding animation starts after 0.5s */
+        reveal 0.5s ease-out, 
+        paddingClose 0.5s ease-in-out 0.5s; 
     position: fixed;
     top: 0;
-    background-color: white; /* Adjust as needed */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow */
+    background-color: white; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 header.hidden {
     transform: translateY(-100%);
@@ -76,7 +77,7 @@ header.hidden {
 }
 
 nav {
-    max-width: 90%; /* Reduced for better responsiveness */
+    max-width: 90%; 
     margin: 0 auto;
     padding: 1.5rem 0;
     display: flex;
@@ -115,6 +116,7 @@ nav ul.menu {
     background: white;
     list-style: none;
     z-index: 10;
+    padding-block: 2.5rem 1.5rem;
 }
 .ctaHeader{
 opacity: 0;
@@ -802,7 +804,7 @@ footer .border-top {
     flex-direction: row;
 }
 footer .btn.btn-primary {
-    background: #00aaec;
+    background: #680cab;
     border: none;
     outline: none;
     padding: 12px;
@@ -1034,7 +1036,7 @@ section.content {
     }
 }
 .image_hero {
-    width: 45%;
+    width: 40%;
 }
 .hero-image-area {
     position: relative;
@@ -1133,7 +1135,7 @@ section.content {
 
 .btn_project {
     color: white;
-    background: #03336e;
+    background: #747474;
     display: inline-block;
     border-radius: 10px;
     padding: 10px 19px;
@@ -1192,7 +1194,7 @@ section.content {
     animation-name: fadeInUp;
 }
 .featured-text {
-    color: #14b2f4;
+    color: #680cab;
     position: relative;
 }
 .featured-text svg {
@@ -1221,11 +1223,11 @@ section.content {
     display: flex;
     margin-right: 1.25rem;
     margin-bottom: 1rem;
-    color: var(--clr-main);
+    color: var(--clr-main-background );
     font-size: 2rem;
     padding: 0.75rem;
     border-radius: 0.25rem;
-    background-color: rgba(var(--clr-main-rgb), 0.15);
+    background-color: var(--clr-light-background );
     transition: all 0.3s ease-in-out 0s;
 }
 .info-items-list .info-title {
@@ -1256,7 +1258,7 @@ section.content {
 .info-items-list .info-item:hover .info-icon,
 .info-items-list .info-item:hover .info-img-icon {
     transform: translateY(-5px);
-    background-color: #00affa;
+    background-color: var(--clr-main-background );
     color: white;
 }
 .hero-content .pre-title {
@@ -1267,7 +1269,7 @@ section.content {
     display: block;
     width: 2rem;
     height: 2px;
-    background-color: #00f6ff;
+    background-color: var(--clr-main-background);
 }
 .projectButton {
     display: inline-block;
@@ -1362,7 +1364,7 @@ section.content {
     font-weight: 400;
 }
 .container_projects .ctaProject {
-    border: 1px solid #09aff4;
+    border: 1px solid var(--clr-main);
     padding: 0.8rem 1rem;
     border-radius: 10px;
     font-weight: 500;
@@ -1372,15 +1374,16 @@ section.content {
     transition: all 0.3s ease-in-out;
 }
 .container_projects .ctaProject:hover {
-    background-color: #09aff4;
-    color: white;
+    background-color: var(--clr-main);
+    color: var(--clr-light-background);
+    border:none;
 }
 .contact_container {
     max-width: 90%;
     margin-inline: auto;
 }
 .ctaHeader.active {
-    background-color: #0db0f4;
+    background-color: #680cab;
     opacity: 1;
     color: white;
     padding: 0.7rem 1.3rem;

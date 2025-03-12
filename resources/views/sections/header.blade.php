@@ -2,7 +2,7 @@
     <div class="section-dotted-bg"></div>
     <nav class="flex flex-row justify-between items-center nav-container">
         <a href="/" class="logo">
-            <img src="{{ asset('img/logo_silver.png') }}" alt="logo">
+            <img src="{{ asset('img/logo_purple.png') }}" alt="logo">
         </a>
         <button class="menu-toggle" aria-label="Toggle Menu">
             ☰

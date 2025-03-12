@@ -11,7 +11,7 @@
                             <div class="content-area"><span class=" pre-title       wow fadeInUp " data-wow-delay=".2s">À
                                     propos de nous</span>
                                 <h2 class=" title    wow fadeInUp" data-wow-delay=".4s"><span class='hollow-text'>Votre
-                                        partenaire</span> de confiance pour des solutions web <span
+                                        partenaire</span> pour des solutions web <span
                                         class='featured-text'>sur mesure.
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150"
                                             preserveAspectRatio="none">
@@ -19,6 +19,7 @@
                                                 d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7">
                                             </path>
                                         </svg> </span></h2>
+                                    <p class="text-purple-100">texttttttt</p>
                             </div>
                         </div>
                         <p class=" about-text">Nous sommes une agence web passionnée, spécialisée dans la création de
