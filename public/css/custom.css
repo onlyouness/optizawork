@@ -530,20 +530,21 @@ a:hover {
 .service_card {
     min-height: 300px;
     padding: 2rem 1.5rem;
-    background: #09aff40f;
+    background: #EEEEEE;
+    
     border-radius: 20px;
-    border: 1px solid #09aff426;
-    cursor: pointer;
+    border:1px solid #dedede;
     transition: all 0.5s ease-in-out;
 }
 .service_card:hover {
     /* background-color: #c4ecfd; */
-    background: rgb(9, 175, 244);
+    /* background: rgb(9, 175, 244);
     background: radial-gradient(
         circle,
         rgba(9, 175, 244, 1) 0%,
         rgba(0, 208, 250, 1) 100%
-    );
+    ); */
+    background: #FFF7D1;
 }
 .service_card:hover .card_detail h4,
 .service_card:hover .card_detail p {
@@ -671,8 +672,8 @@ a:hover {
     text-transform: uppercase;
 } */
 .card_content .service_link {
-    color: #09aff4;
-    background: #09aff430;
+    color: #3B1E54;
+    background: #D4BEE4;
     display: inline-block;
     border-radius: 30px;
     padding: 14px 21px;
@@ -688,8 +689,8 @@ a:hover {
 }
 
 .service_card:hover .service_link {
-    color: white;
-    background-color: #7cd8ffad;
+    color: #D4BEE4;
+    background-color: #3B1E54;
 
     /* box-shadow: 0px 9px 14px rgba(89, 86, 233, 0.19); */
 }
