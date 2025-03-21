@@ -23,7 +23,6 @@
                     <li><a href="/services/cloud-hébergement">Cloud & Hébergement</a></li>
                 </ul>
             </li>
-            <li class="menu_item"><a href="/about">A propos</a></li>
             <li class="menu_item"><a href="/contact">Contact</a></li>
         </ul>
         <button class="ctaHeader" onclick="sendWhatsAppMessage('Demander Un Devis Pour un project')">Demander Un Devis</button>

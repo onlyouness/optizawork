@@ -53,7 +53,7 @@
                             placeholder="Commentaire..."></textarea>
                     </div>
                     <button type="submit"
-                        class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-blue-500 sm:w-fit hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-primary-300 ">
+                        class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg  bg-purple-700 hover:bg-purple-400 sm:w-fit  focus:ring-4 focus:outline-none focus:ring-primary-300 ">
                             Envoyer message</button>
                 </form>
             </div>
